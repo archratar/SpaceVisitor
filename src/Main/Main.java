@@ -1,18 +1,18 @@
 package Main;
 
-import Builder.SpaceShipBuilder;
 import Builder.TolyanBuilder;
+import Builder.SpaceShipBuilder;
 import Ship.SpaceShip;
 
 public class Main {
     public static void main(String[] args) {
 
         SpaceShip hyperion = new SpaceShip();
-        TolyanBuilder tolyan = new SpaceShipBuilder(hyperion);
+        SpaceShipBuilder tolyan = new TolyanBuilder(hyperion);
 
-        String cabin = new String("Korobka");
-        String engine = new String("Toyota");
-        String stages = new String("Stremyanka");
+        String cabin = new String("Korobka cabin");
+        String engine = new String("Toyota engine");
+        String stages = new String("Stremyanka stages");
 
         int value = 0;
         while (! tolyan.shipIsReady()) {
@@ -32,7 +32,7 @@ public class Main {
             }
 
             try {
-                Thread.sleep(100);
+                Thread.sleep(1000);
             } catch (Exception e) {
                 e.printStackTrace();
             }

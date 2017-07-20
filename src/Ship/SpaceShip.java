@@ -10,24 +10,27 @@ public class SpaceShip {
 
     }
 
-    public Cabin getCabin() {
-
-        return cabin;
-    }
-
     public void setCabin(String cabin) {
-
-        this.cabin.setCabin(cabin);
+        this.cabin = new Cabin(cabin);
     }
 
+    public void setStages(String stages) {
+        this.stages = new Stages(stages);
+    }
+
+    public void setEngine(String engine) {
+        this.engine = new Engine(engine);
+    }
+
+    // getters
     public Engine getEngine() {
 
         return engine;
     }
 
-    public void setEngine(String engine) {
+    public Cabin getCabin() {
 
-        this.engine.setEngine(engine);
+        return cabin;
     }
 
     public Stages getStages() {
@@ -35,8 +38,5 @@ public class SpaceShip {
         return stages;
     }
 
-    public void setStages(String stages) {
 
-        this.stages.setStages(stages);
-    }
 }
