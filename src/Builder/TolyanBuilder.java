@@ -6,6 +6,7 @@ import Ship.SpaceShip;
 public class TolyanBuilder implements SpaceShipBuilder {
 
     private SpaceShip ship;
+    private int leaverLevel = 100;
 
     public TolyanBuilder() {
         this.ship = new SpaceShip();
@@ -13,6 +14,15 @@ public class TolyanBuilder implements SpaceShipBuilder {
 
     public TolyanBuilder(SpaceShip ship) {
         this.ship = ship;
+    }
+
+    public int leaverShot() {
+        this.leaverLevel--;
+        return this.leaverLevel;
+    }
+
+    public int getLeaverState() {
+        return this.leaverLevel;
     }
 
     public TolyanBuilder buildStages(String stages) {
