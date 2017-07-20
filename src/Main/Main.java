@@ -26,7 +26,7 @@ public class Main {
                     break;
                 case 50: tolyan.buildStages(stages); System.out.println(stages);
                     break;
-                case 66: tolyan.build(engine, cabin, stages); System.out.println(engine + " " + cabin + " " + stages);
+                case 66: tolyan.buildStages(stages).buildCabin(cabin).buildEngine(engine); System.out.println(engine + " " + cabin + " " + stages);
                     break;
                 default: System.out.println("Leaver shot");
             }

@@ -15,19 +15,19 @@ public class TolyanBuilder implements SpaceShipBuilder {
         this.ship = ship;
     }
 
-    public SpaceShip buildStages(String stages) {
+    public TolyanBuilder buildStages(String stages) {
         this.ship.setStages(stages);
-        return this.ship;
+        return this;
     }
 
-    public SpaceShip buildEngine(String engine) {
+    public TolyanBuilder buildEngine(String engine) {
         this.ship.setEngine(engine);
-        return this.ship;
+        return this;
     }
 
-    public SpaceShip buildCabin(String cabin) {
+    public TolyanBuilder buildCabin(String cabin) {
         this.ship.setCabin(cabin);
-        return this.ship;
+        return this;
     }
 
     public SpaceShip build(String engine, String cabin, String stages) {
