@@ -26,7 +26,7 @@ public class Main {
 
             value = (int)( Math.random() * 100 );
 
-            System.out.println("Your roll is " + value + " ,");
+            System.out.println("Your roll is " + value + " , ");
             switch (value) {
                 case 10: tolyan.buildCabin(cabin); System.out.println(cabin);
                     break;
@@ -38,8 +38,8 @@ public class Main {
                     break;
                 default:  tolyan.leaverShot(); statusOfTolyan--;
             }
-            
-            System.out.println("Your builder is on " + tolyan.getLeaverState() + " leaver level");
+
+//            System.out.println("Your builder is on " + tolyan.getLeaverState() + " leaver level");
 
             try {
                 Thread.sleep(10);
